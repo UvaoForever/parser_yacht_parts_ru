@@ -61,7 +61,7 @@ iter = 1
 logging.info(f'Все категории ({len(categories)}) успешно сформированы.')
 for cat in categories:
     logging.info(f"Перебор {iter}-й категории, категория: {cat['category']}")
-
+    iter += 1
     # Получение всех товаров на странице
     product_page = get_soup(main_url + cat['href'])
     # Узнаём количество страниц, путём нахождения
